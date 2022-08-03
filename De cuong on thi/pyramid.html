@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        function pyramid(input){
+            let sum = 0;
+            let space = 0;
+            let x =0;
+            for(var i=0;i<=input;i++){
+                space = space + i +'';
+                sum = sum+'*'.repeat(i);
+                x = space + sum;
+                const el =document.createElement('div');
+                el.textContent = space;
+                const box = document.getElementById('box');
+box.appendChild(el);
+            }
+        }
+        pyramid(5);  
+    </script>
+</body>
+</html>
+
